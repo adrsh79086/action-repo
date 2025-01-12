@@ -49,21 +49,6 @@ def webhook():
 
     return jsonify({"message": "Event received and stored"}), 200
 
-
-# Route to render the UI
-@app.route('/')
-def index():
-    print("Rendering index page")
-    return render_template('index.html')
-
-
-# API endpoint to fetch events from MongoDB
-@app.route('/events', methods=['GET'])
-def get_events():
-    events = list(collection.find({}, {"_id": 0}).sort("timestamp", -1).limit(20))
-    return jsonify(events)
-
-
 # Run the Flask server
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
