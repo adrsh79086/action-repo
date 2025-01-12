@@ -64,6 +64,6 @@ def get_events():
     return jsonify(events)
 
 
-# Run the Flask server
+
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
