@@ -64,7 +64,7 @@ def get_events():
     return jsonify(events)
 
 
-#port for ui
+#port 
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
