@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 import pymongo
 from datetime import datetime
 
-# Initialize Flask app
 app = Flask(__name__)
 
 # Connect to MongoDB
